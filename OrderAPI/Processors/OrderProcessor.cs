@@ -75,6 +75,10 @@ namespace OrderAPI.Processors
                 afterTaxCost  = couponDiscountedPrice+ taxAmount;
                 // no need to calculate the tax becase itme is free
             }
+            else
+            {
+                couponDiscountedPrice = 0;
+            }
             return new OrderItemSummary
             {
                 PreTaxCost = couponDiscountedPrice,
